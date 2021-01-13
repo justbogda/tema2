@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -7,12 +8,59 @@
    <children>
       <Pane layoutX="200.0" layoutY="78.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <SplitMenuButton layoutX="73.0" layoutY="91.0" mnemonicParsing="false" text="Tara">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-              </items>
-            </SplitMenuButton>
-         </children></Pane>
+            <HBox layoutX="14.0" layoutY="14.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <MenuButton fx:id="country_s" mnemonicParsing="false" prefWidth="110.0" text="Select Country">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                           <VBox.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </VBox.margin>
+                        </MenuButton>
+                        <ChoiceBox fx:id="choice_tara" onMouseClicked="#test_tara" prefHeight="25.0" prefWidth="110.0">
+                           <VBox.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </opaqueInsets></VBox>
+                  <VBox>
+                     <children>
+                        <MenuButton fx:id="city_s" mnemonicParsing="false" prefWidth="110.0" text="Select City">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                           <VBox.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </VBox.margin>
+                        </MenuButton>
+                        <ChoiceBox fx:id="choice_oras" onMouseClicked="#test_oras" prefWidth="110.0">
+                           <VBox.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </opaqueInsets></VBox>
+                  <Button fx:id="show_b" mnemonicParsing="false" onAction="#showButtonClicked" text="Show me!">
+                     <HBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </HBox.margin></Button>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </opaqueInsets></HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Pane>
    </children>
 </AnchorPane>
