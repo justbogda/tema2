@@ -16,6 +16,7 @@ public class config {
 
     public ObservableList<String> listaorase = FXCollections.observableArrayList();
     public ObservableList<String> listatari = FXCollections.observableArrayList();
+    public ObservableList<Orase> listacity = FXCollections.observableArrayList();
     Iterator it;
     public void add_orase(String datax) {
         String id;
@@ -39,6 +40,7 @@ public class config {
         //System.out.println(id + "\n" + nume + "\n" + lat + "\n" + lon + "\n" + tara + "\n");
         //listaorase.add(new Orase(nume, tara, id, lat, lon));
         city=new Orase(nume, tara, id, lat, lon);
+        listacity.add(city);
         //System.out.println(city.getNume());
         int a=0;
 
@@ -72,11 +74,20 @@ public class config {
         cuvant.close();
     }
 
-    public ObservableList<String> getListaorase(String tara) {
+    public ObservableList<String> getListatari() {
+
+        return listatari;
+    }
+    public ObservableList<String> getListaorase(String tara_x){
+
+        for (int i=0; i<listacity.size();i++) {
+            if(listacity.get(i).getTara().equals(tara_x)) {
+                listaorase.add(listacity.get(i).getNume());
+                //System.out.print(listacity.get(i).getNume() +i +listacity.size());
+            }
+
+        }
 
         return listaorase;
-    }
-    public ObservableList<String> getListatari(){
-        return listatari;
     }
 }
