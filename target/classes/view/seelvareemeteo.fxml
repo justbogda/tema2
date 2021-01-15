@@ -12,15 +12,6 @@
                <children>
                   <VBox>
                      <children>
-                        <MenuButton fx:id="country_s" mnemonicParsing="false" prefWidth="110.0" text="Select Country">
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Action 1" />
-                            <MenuItem mnemonicParsing="false" text="Action 2" />
-                          </items>
-                           <VBox.margin>
-                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
-                           </VBox.margin>
-                        </MenuButton>
                         <ChoiceBox fx:id="choice_tara" onMouseClicked="#test_tara" prefHeight="25.0" prefWidth="110.0">
                            <VBox.margin>
                               <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
@@ -32,15 +23,6 @@
                      </opaqueInsets></VBox>
                   <VBox>
                      <children>
-                        <MenuButton fx:id="city_s" mnemonicParsing="false" prefWidth="110.0" text="Select City">
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Action 1" />
-                            <MenuItem mnemonicParsing="false" text="Action 2" />
-                          </items>
-                           <VBox.margin>
-                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
-                           </VBox.margin>
-                        </MenuButton>
                         <ChoiceBox fx:id="choice_oras" onMouseClicked="#test_oras" prefWidth="110.0">
                            <VBox.margin>
                               <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
