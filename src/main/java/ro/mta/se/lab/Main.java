@@ -24,7 +24,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
         config conf;
         conf = new config();
-        //conf.info_orase();
+
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(this.getClass().getResource("/view/seelvareemeteo.fxml"));
         primaryStage.setScene(new Scene(loader.load()));

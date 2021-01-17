@@ -12,12 +12,25 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Clasa de configure se ocupa deschiderea fisierului de configurare
+ * initializarea membrilor cu datele din acesta si returnarea datelor
+ * oricarei clase are nevoie de acestea
+ */
 public class config {
-
+    /**
+     * Membrii clasei sunt reprezentari de 3 liste 2 de tipul string si una de tipul
+     * Orase
+     */
     public ObservableList<String> listaorase = FXCollections.observableArrayList();
     public ObservableList<String> listatari = FXCollections.observableArrayList();
     public ObservableList<Orase> listacity = FXCollections.observableArrayList();
-    Iterator it;
+
+    /**
+     * Functia primeste datele unui oras si le pune intr-un obiect de tipul Orase
+     * dar si creaza lista de tari unice.
+     * @param datax
+     */
     public void add_orase(String datax) {
         String id;
         String lat;
@@ -59,8 +72,10 @@ public class config {
         cuvant2.close();
     }
 
-
-
+    /**
+     * functia deschide fisierul de configurare si trimite datele unui oras catre functia add_orase
+     * @throws FileNotFoundException
+     */
     public void info_orase() throws FileNotFoundException {
 
 
@@ -74,10 +89,20 @@ public class config {
         cuvant.close();
     }
 
+    /**
+     * Functia returneaza lista de tari unice
+     * @return
+     */
     public ObservableList<String> getListatari() {
 
         return listatari;
     }
+
+    /**
+     * Functia primeste tara_x ce reprezinta numele unei tari si returneaza toate orasele din acea tara
+     * @param tara_x
+     * @return
+     */
     public ObservableList<String> getListaorase(String tara_x){
 
         for (int i=0; i<listacity.size();i++) {
